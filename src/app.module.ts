@@ -3,10 +3,11 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { WebsocketGateway } from './gateway/web-socket.gateway';
 import { WhiteboardModule } from './modules/whiteboard.module';
+import { TypeOrmModule } from '@nestjs/typeorm';
 
 @Module({
-  imports: [WhiteboardModule],
-  controllers: [AppController],
-  providers: [AppService, WebsocketGateway],
+	imports: [WhiteboardModule],
+	controllers: [AppController],
+	providers: [AppService, WebsocketGateway],
 })
-export class AppModule {}
+export class AppModule { }
