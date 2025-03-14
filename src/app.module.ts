@@ -7,6 +7,6 @@ import { WhiteboardModule } from './modules/whiteboard.module';
 @Module({
   imports: [WhiteboardModule],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService, WebsocketGateway],
 })
 export class AppModule {}

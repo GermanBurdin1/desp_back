@@ -9,7 +9,7 @@ import {
 } from '@nestjs/websockets';
 import { Server, Socket } from 'socket.io';
 
-@WebSocketGateway({ cors: true })
+@WebSocketGateway({ cors: { origin: '*' } })
 export class WebsocketGateway implements OnGatewayConnection, OnGatewayDisconnect {
   @WebSocketServer() server: Server;
   private users: Map<string, string> = new Map(); // userId -> socketId
